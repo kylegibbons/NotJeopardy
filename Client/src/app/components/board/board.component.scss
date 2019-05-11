@@ -1,0 +1,18 @@
+.board {
+    height: 100vmin;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: .75fr 1fr 1fr 1fr 1fr 1fr; //10vmin repeat(5, 18vmin);
+
+    div {
+        font-size: 25px;
+        font-weight: 500;
+        display: flex;
+        border-style: solid;
+        border-color: black;
+        border-width: 1px;
+        background-color: red;
+        justify-content: center;
+        align-items: center;
+    }
+}
