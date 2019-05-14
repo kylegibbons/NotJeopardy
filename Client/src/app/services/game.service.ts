@@ -21,6 +21,15 @@ export class GameService {
 
     this.socket.connect();
 
+    //JOIN GAME
+    this.socket.send({
+      messageType: "JoinGame",
+      timestamp: null,
+      payload: {
+        gameId: "a267dd0b-40cb-4178-ad8c-58d5efa1ff29"
+      },
+    })
+
     const messagesSubscription: Subscription = this.socket.messages$.subscribe(
       (message: string) => {
         console.log('received message:', message)

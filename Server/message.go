@@ -2,19 +2,21 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 	"log"
 	"time"
 )
 
 type Message struct {
+	Client      *Client
 	MessageType string      `json:"messageType,omitempty"`
 	Timestamp   time.Time   `json:"timestamp,omitempty"`
+	GameID      string      `json:"gameId,omitempty"`
 	Payload     interface{} `json:"payload,omitempty"`
 	//Payload []byte `json:"payload,omitempty"`
 }
 
-func UnmarshallMessage(rawMessage []byte) Message {
+func UnmarshallMessage(client *Client, rawMessage []byte) Message {
+
 	var messageMetatdata struct {
 		MessageType string    `json:"messageType,omitempty"`
 		Timestamp   time.Time `json:"timestamp,omitempty"`
@@ -30,9 +32,9 @@ func UnmarshallMessage(rawMessage []byte) Message {
 	switch messageMetatdata.MessageType {
 	case "GameState":
 
-	case "SelectClue":
+	case "JoinGame":
 		var payload struct {
-			Payload ClueSelect `json:"payload,omitempty"`
+			Payload GameID `json:"payload,omitempty"`
 		}
 
 		err := json.Unmarshal(rawMessage, &payload)
@@ -42,19 +44,47 @@ func UnmarshallMessage(rawMessage []byte) Message {
 			return Message{}
 		}
 
-		fmt.Printf("%+v\n", payload)
-
-		return Message{
+		newMessage := Message{
+			Client:      client,
 			MessageType: messageMetatdata.MessageType,
 			Timestamp:   messageMetatdata.Timestamp,
 			Payload:     payload.Payload,
 		}
+
+		log.Printf("Unmarshalled message: %+v", newMessage)
+
+		return newMessage
+
+	case "SelectClue":
+		var payload struct {
+			Payload ClueSelect `json:"payload,omitempty"`
+		}
+
+		/*err := json.Unmarshal(rawMessage, &payload)
+
+		if err != nil {
+			log.Printf("Could not unmarshall message payload: %v\n", err)
+			return Message{}
+		}
+
+		fmt.Printf("%+v\n", payload)*/
+
+		newMessage := Message{
+			Client:      client,
+			MessageType: messageMetatdata.MessageType,
+			Timestamp:   messageMetatdata.Timestamp,
+			Payload:     payload.Payload,
+		}
+
+		log.Panicf("Unmarshalled message: %+v", newMessage)
+
+		return newMessage
 	}
 
 	return Message{}
 }
 
-func makeMessage(MessageType string, Payload interface{}) ([]byte, error) {
+func makeMessage(MessageType string, Payload interface{}) (Message, error) {
 
 	var message Message
 
@@ -62,23 +92,6 @@ func makeMessage(MessageType string, Payload interface{}) ([]byte, error) {
 	message.Timestamp = time.Now()
 	message.Payload = Payload
 
-	messageJSON := []byte{}
-	var err error
-
-	if localSettings.Production {
-		messageJSON, err = json.Marshal(message)
-	}
-
-	if !localSettings.Production {
-		messageJSON, err = json.MarshalIndent(message, "", "    ")
-	}
-
-	//fmt.Printf(string(messageJSON))
-
-	if err != nil {
-		return nil, fmt.Errorf("Error writing results to JSON: %v", err)
-	}
-
-	return messageJSON, nil
+	return message, nil
 
 }

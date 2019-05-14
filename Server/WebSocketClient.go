@@ -1,6 +1,8 @@
 package main
 
 import (
+	"bytes"
+	"encoding/json"
 	"log"
 	"net/http"
 	"time"
@@ -36,11 +38,14 @@ var upgrader = websocket.Upgrader{
 type Client struct {
 	hub *Hub
 
+	gameID   string
+	clientID string
+
 	// The websocket connection.
 	conn *websocket.Conn
 
 	// Buffered channel of outbound messages.
-	send chan []byte
+	send chan Message
 }
 
 // readPump pumps messages from the websocket connection to the hub.
@@ -66,7 +71,7 @@ func (c *Client) readPump() {
 			break
 		}
 
-		/* var messageJSON Message
+		var messageJSON Message
 		err = json.Unmarshal(bytes.TrimSpace(bytes.Replace(message, newline, space, -1)), &messageJSON)
 
 		if err != nil {
@@ -74,9 +79,9 @@ func (c *Client) readPump() {
 			continue
 		}
 
-		log.Println(string(message)) */
+		log.Println(string(message))
 
-		gameManager.Action <- UnmarshallMessage(message)
+		gameManager.Action <- UnmarshallMessage(c, message)
 
 		//c.hub.broadcast <- message
 	}
@@ -107,15 +112,14 @@ func (c *Client) writePump() {
 			if err != nil {
 				return
 			}
-			w.Write(message)
 
-			// Add queued chat messages to the current websocket message.
-			// This will empty the queue. If messages are sent together they will be combined
-			/*n := len(c.send)
-			for i := 0; i < n; i++ {
-				w.Write(newline)
-				w.Write(<-c.send)
-			}*/
+			messageBytes, err := json.Marshal(message)
+
+			if err != nil {
+				log.Printf("Could not marshall message: %v", err)
+			}
+
+			w.Write(messageBytes)
 
 			if err := w.Close(); err != nil {
 				return
@@ -143,7 +147,7 @@ func serveWs(hub *Hub, w http.ResponseWriter, r *http.Request) {
 		log.Println(err)
 		return
 	}
-	client := &Client{hub: hub, conn: conn, send: make(chan []byte, 256)}
+	client := &Client{hub: hub, conn: conn, send: make(chan Message, 256)}
 	client.hub.register <- client
 
 	// Allow collection of memory referenced by the caller by doing all work in

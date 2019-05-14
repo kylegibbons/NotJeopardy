@@ -194,3 +194,44 @@
 2019/05/14 09:35:17 GET	/ws	Web Socket	350.679µs
 2019/05/14 09:35:42 GET	/ws	Web Socket	71.698µs
 2019/05/14 09:35:59 GET	/ws	Web Socket	206.988µs
+2019/05/14 17:59:15 Received the TERM or INTERUPT signal. Quitting
+2019/05/14 18:12:26 Received the TERM or INTERUPT signal. Quitting
+2019/05/14 18:12:38 GET	/ws	Web Socket	174.188µs
+2019/05/14 18:20:17 GET	/ws	Web Socket	159.466µs
+2019/05/14 18:21:21 Received the TERM or INTERUPT signal. Quitting
+2019/05/14 18:21:32 GET	/ws	Web Socket	644.893µs
+2019/05/14 18:22:36 Received the TERM or INTERUPT signal. Quitting
+2019/05/14 18:22:39 Received the TERM or INTERUPT signal. Quitting
+2019/05/14 18:22:51 GET	/ws	Web Socket	207.503µs
+2019/05/14 18:22:52 {"messageType":"JoinGame","timestamp":null,"payload":{"gamdeId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29"}}
+2019/05/14 18:24:55 Received the TERM or INTERUPT signal. Quitting
+2019/05/14 18:25:10 GET	/ws	Web Socket	159.205µs
+2019/05/14 18:25:10 {"messageType":"JoinGame","timestamp":null,"payload":{"gamdeId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29"}}
+2019/05/14 18:25:48 Received the TERM or INTERUPT signal. Quitting
+2019/05/14 18:25:59 GET	/ws	Web Socket	178.739µs
+2019/05/14 18:25:59 {"messageType":"JoinGame","timestamp":null,"payload":{"gamdeId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29"}}
+2019/05/14 18:28:00 Received the TERM or INTERUPT signal. Quitting
+2019/05/14 18:29:12 Received the TERM or INTERUPT signal. Quitting
+2019/05/14 18:29:55 GET	/ws	Web Socket	193.439µs
+2019/05/14 18:29:56 {"messageType":"JoinGame","timestamp":null,"payload":{"gamdeId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29"}}
+2019/05/14 18:29:56 Unmarshalled message: {ClientID:784743d2-8605-4556-be72-aea18a0f90d6 MessageType:JoinGame Timestamp:0001-01-01 00:00:00 +0000 UTC GameID: Payload:{GameID:}}
+2019/05/14 18:29:56 Joining Game 
+2019/05/14 18:41:15 Received the TERM or INTERUPT signal. Quitting
+2019/05/14 18:41:27 GET	/ws	Web Socket	411.152µs
+2019/05/14 18:41:28 {"messageType":"JoinGame","timestamp":null,"payload":{"gamdeId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29"}}
+2019/05/14 18:41:28 Unmarshalled message: {Client:0xc42018c2c0 MessageType:JoinGame Timestamp:0001-01-01 00:00:00 +0000 UTC GameID: Payload:{GameID:}}
+2019/05/14 18:41:28 Joining Game 
+2019/05/14 18:43:06 Received the TERM or INTERUPT signal. Quitting
+2019/05/14 18:43:16 GET	/ws	Web Socket	179.762µs
+2019/05/14 18:43:16 {"messageType":"JoinGame","timestamp":null,"payload":{"gamdeId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29"}}
+2019/05/14 18:43:16 Could not unmarshall message payload: json: cannot unmarshal object into Go struct field .payload of type string
+2019/05/14 18:43:16 Got empty message. Possible unknown MessageType.
+2019/05/14 18:45:20 GET	/ws	Web Socket	186.618µs
+2019/05/14 18:45:20 {"messageType":"JoinGame","timestamp":null,"payload":{"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29"}}
+2019/05/14 18:45:20 Could not unmarshall message payload: json: cannot unmarshal object into Go struct field .payload of type string
+2019/05/14 18:45:20 Got empty message. Possible unknown MessageType.
+2019/05/14 18:45:24 Received the TERM or INTERUPT signal. Quitting
+2019/05/14 18:45:37 GET	/ws	Web Socket	580.542µs
+2019/05/14 18:45:37 {"messageType":"JoinGame","timestamp":null,"payload":{"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29"}}
+2019/05/14 18:45:37 Unmarshalled message: {Client:0xc4201922c0 MessageType:JoinGame Timestamp:0001-01-01 00:00:00 +0000 UTC GameID: Payload:{GameID:a267dd0b-40cb-4178-ad8c-58d5efa1ff29}}
+2019/05/14 18:45:37 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
