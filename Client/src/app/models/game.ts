@@ -6,6 +6,7 @@ export interface Game {
     creatorId?: string;
     creatorName?: string;
     gameName?: string;
+    round: number;
     categories: Category[];
 }
 

@@ -1,0 +1,8 @@
+listener: ":7071"
+base_url: "localhost:4200"
+db_dir: "./database"
+db_value_dir: "./database"
+db_host: "localhost"
+db_user: "dev"
+db_password: "1Goodpassword"
+db_bucket: "NotJeopardy"

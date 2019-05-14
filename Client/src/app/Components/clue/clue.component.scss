@@ -1,0 +1,33 @@
+.flex_container {
+    height: 100%;
+    background-color: red;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    div {
+        //height: 100%;
+        width: 100%;
+        text-align: center;
+
+        display: flex;
+        justify-content:center;
+        align-content:center;
+        flex-direction:column;
+    }
+
+    .category {
+        font-size: 30pt;
+        flex-grow: 1;
+        border-bottom-width: 2px;
+        border-bottom-style: solid;
+        border-bottom-color: black;
+    }
+
+    .clue {
+        font-size: 50pt;
+        flex-grow: 8;
+    }
+}

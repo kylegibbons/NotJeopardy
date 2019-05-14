@@ -1,5 +1,5 @@
 .board {
-    height: 100vmin;
+    height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: .75fr 1fr 1fr 1fr 1fr 1fr; //10vmin repeat(5, 18vmin);
@@ -12,7 +12,11 @@
         border-color: black;
         border-width: 1px;
         background-color: red;
-        justify-content: center;
-        align-items: center;
+        
+        
+        display: flex;
+        justify-content:center;
+        align-content:center;
+        flex-direction:column;
     }
 }
