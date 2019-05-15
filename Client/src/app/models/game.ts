@@ -25,3 +25,9 @@ export interface Clue {
     media?: string;
     dailyDouble: boolean;
 }
+
+export interface ClueSelect {
+    round: number;
+    categoryNumber: number;
+    clueNumber: number;
+}

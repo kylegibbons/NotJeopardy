@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Game } from '../models/game';
+import { Game, ClueSelect } from '../models/game';
 import { WebsocketService } from './websocket.service';
 import { Observable, Subject, Subscription } from 'rxjs';
 import { map, filter, retryWhen, delay } from 'rxjs/operators';
@@ -13,11 +13,18 @@ export class GameService {
   private game: Subject<Game>;
   private gameData: Game;
 
+  public activeClue$: Observable<ClueSelect>;
+  private activeClue: Subject<ClueSelect>;
+  
+
   constructor(private socket: WebsocketService) { 
     console.log('Starting Game service');
 
     this.game = new Subject<Game>();
     this.game$ = this.game.asObservable();
+
+    this.activeClue = new Subject<ClueSelect>();
+    this.activeClue$ = this.activeClue.asObservable();
 
     this.socket.connect();
 
@@ -25,10 +32,9 @@ export class GameService {
     this.socket.send({
       messageType: "JoinGame",
       timestamp: null,
-      payload: {
-        gameId: "a267dd0b-40cb-4178-ad8c-58d5efa1ff29"
-      },
-    })
+      gameId: "a267dd0b-40cb-4178-ad8c-58d5efa1ff29",
+      payload: null
+    });
 
     const messagesSubscription: Subscription = this.socket.messages$.subscribe(
       (message: string) => {
@@ -44,7 +50,7 @@ export class GameService {
             this.game.next(this.gameData);
             break;
           case "SelectClue":
-            console.log("Message: SelectClue")
+            this.activeClue.next(thisMessage.payload)
             break;
         }
         
@@ -64,42 +70,15 @@ export class GameService {
         console.log('the connection was closed in response to the user')
       },
     )
-
-
-/*
-    this.game = Observable.create((obs) => {
-
-      // this.socketSubscription =
-      this.socket.messages.pipe(
-        retryWhen(errors => errors.pipe(delay(1000)))).pipe(
-        /*filter((message: string) => {
-          // Print message to the console
-          // console.log('Unit:');
-          // console.log(message);
-          const thisMessage: Message = JSON.parse(message);
-          if (thisMessage.MessageType === 'units') {
-            return true;
-          }
-          return false;
-        })*/
-      /*)
-      .subscribe((message: string) => {
-        //const thisMessage: Message = JSON.parse(message);
-        //obs.next(thisMessage.Payload);
-        console.log(message)
-        obs.next(message);
-        });
-      });*/
-
   }
 
   public SelectClue(categoryNumber:string, clueNumber: string) {
     this.socket.send(
       {
         messageType: "SelectClue",
+        gameId: this.gameData.id,
         timestamp: null,
         payload: {
-          gameID: this.gameData.id,
           round: this.gameData.round,
           categoryNumber: categoryNumber,
           clueNumber: clueNumber,

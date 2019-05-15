@@ -1,6 +1,8 @@
 package main
 
 import (
+	"log"
+
 	"github.com/satori/go.uuid"
 )
 
@@ -52,7 +54,10 @@ func (h *Hub) run() {
 				close(client.send)
 			}
 		case message := <-h.broadcast:
+			log.Printf("Broadcasting Message: %+v", message)
 			for client := range h.clients {
+				//fmt.Printf("Client Game ID: %v\n", client.gameID)
+				//fmt.Printf("Message Game ID: %v\n", message.GameID)
 				if message.GameID == client.gameID {
 					select {
 					case client.send <- message:
@@ -65,6 +70,7 @@ func (h *Hub) run() {
 		case info := <-h.joinGame:
 			for client := range h.clients {
 				if client.clientID == info.Client.clientID {
+					//h.clients[client].gameID = info.GameID
 					client.gameID = info.GameID
 				}
 			}

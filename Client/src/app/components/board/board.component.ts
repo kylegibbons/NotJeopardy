@@ -32,6 +32,12 @@ export class BoardComponent implements OnInit {
       console.log(game);
       this.game = game;
     });
+
+    this.gameService.activeClue$.subscribe(clueSelect => {
+      console.log('ActiveClue: ');
+      console.log(clueSelect);
+      //this.game = game;
+    });
   }
 
   clueClick(categoryNumber:string, clueNumber: string) {
