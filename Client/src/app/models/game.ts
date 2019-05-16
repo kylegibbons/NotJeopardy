@@ -6,10 +6,18 @@ export interface Game {
     creatorId?: string;
     creatorName?: string;
     gameName?: string;
+    rounds: Round[];
     round: number;
-    categories: Category[];
+    activeCategory: Category;
+    activeClue: Clue;
 }
 
+export interface Round {
+    name: string;
+    comment?: string;
+    categories: Category[];
+}
+    
 export interface Category {
     name: string;
     comment?: string;

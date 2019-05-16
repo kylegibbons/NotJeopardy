@@ -424,3 +424,136 @@
 2019/05/15 18:33:20 {"messageType":"SelectClue","gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","timestamp":null,"payload":{"categoryNumber":2,"clueNumber":3}}
 2019/05/15 18:33:20 Unmarshalled message: {Client:0xc42009e700 MessageType:SelectClue GameID:a267dd0b-40cb-4178-ad8c-58d5efa1ff29 Timestamp:0001-01-01 00:00:00 +0000 UTC Payload:{Round:0 CategoryNumber:2 ClueNumber:3}}
 2019/05/15 18:33:20 Broadcasting Message: {Client:<nil> MessageType:SelectClue GameID:a267dd0b-40cb-4178-ad8c-58d5efa1ff29 Timestamp:2019-05-15 18:33:20.872533878 -0400 EDT m=+18.299391386 Payload:{Round:0 CategoryNumber:2 ClueNumber:3}}
+2019/05/16 06:17:08 {"messageType":"SelectClue","gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","timestamp":null,"payload":{"categoryNumber":3,"clueNumber":0}}
+2019/05/16 06:17:08 Unmarshalled message: {Client:0xc42009e700 MessageType:SelectClue GameID:a267dd0b-40cb-4178-ad8c-58d5efa1ff29 Timestamp:0001-01-01 00:00:00 +0000 UTC Payload:{Round:0 CategoryNumber:3 ClueNumber:0}}
+2019/05/16 06:17:08 Broadcasting Message: {Client:<nil> MessageType:SelectClue GameID:a267dd0b-40cb-4178-ad8c-58d5efa1ff29 Timestamp:2019-05-16 06:17:08.590076153 -0400 EDT m=+893.807001073 Payload:{Round:0 CategoryNumber:3 ClueNumber:0}}
+2019/05/16 06:47:06 GET	/ws	Web Socket	2.954917ms
+2019/05/16 06:47:07 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/05/16 06:47:07 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/05/16 06:47:08 GET	/ws	Web Socket	115.893µs
+2019/05/16 06:47:08 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/05/16 06:47:08 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/05/16 06:48:18 GET	/ws	Web Socket	117.868µs
+2019/05/16 06:48:18 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/05/16 06:48:18 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/05/16 06:48:19 GET	/ws	Web Socket	113.125µs
+2019/05/16 06:48:20 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/05/16 06:48:20 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/05/16 06:48:42 GET	/ws	Web Socket	81.873µs
+2019/05/16 06:48:42 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/05/16 06:48:42 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/05/16 06:48:43 GET	/ws	Web Socket	64.645µs
+2019/05/16 06:48:43 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/05/16 06:48:43 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/05/16 06:49:49 GET	/ws	Web Socket	148.627µs
+2019/05/16 06:49:49 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/05/16 06:49:49 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/05/16 06:49:50 GET	/ws	Web Socket	89.468µs
+2019/05/16 06:49:51 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/05/16 06:49:51 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/05/16 06:58:31 GET	/ws	Web Socket	2.597939ms
+2019/05/16 06:58:31 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/05/16 06:58:31 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/05/16 06:58:32 GET	/ws	Web Socket	142.35µs
+2019/05/16 06:58:33 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/05/16 06:58:33 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/05/16 06:59:35 GET	/ws	Web Socket	208.379µs
+2019/05/16 06:59:35 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/05/16 06:59:35 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/05/16 06:59:36 GET	/ws	Web Socket	246.004µs
+2019/05/16 06:59:37 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/05/16 06:59:37 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/05/16 07:00:53 Received the TERM or INTERUPT signal. Quitting
+2019/05/16 07:05:28 GET	/ws	Web Socket	225.064µs
+2019/05/16 07:05:28 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/05/16 07:05:28 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/05/16 07:05:30 GET	/ws	Web Socket	83.978µs
+2019/05/16 07:05:30 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/05/16 07:05:30 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/05/16 07:05:51 GET	/ws	Web Socket	100.398µs
+2019/05/16 07:05:51 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/05/16 07:05:51 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/05/16 07:05:52 GET	/ws	Web Socket	126.053µs
+2019/05/16 07:05:52 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/05/16 07:05:52 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/05/16 07:06:01 {"messageType":"SelectClue","gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","timestamp":null,"payload":{"round":0,"categoryNumber":2,"clueNumber":0}}
+2019/05/16 07:06:01 Unmarshalled message: {Client:0xc42009e800 MessageType:SelectClue GameID:a267dd0b-40cb-4178-ad8c-58d5efa1ff29 Timestamp:0001-01-01 00:00:00 +0000 UTC Payload:{Round:0 CategoryNumber:2 ClueNumber:0}}
+2019/05/16 07:06:01 Broadcasting Message: {Client:<nil> MessageType:SelectClue GameID:a267dd0b-40cb-4178-ad8c-58d5efa1ff29 Timestamp:2019-05-16 07:06:01.296186948 -0400 EDT m=+290.133010396 Payload:{Round:0 CategoryNumber:2 ClueNumber:0}}
+2019/05/16 07:07:13 GET	/ws	Web Socket	133.59µs
+2019/05/16 07:07:13 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/05/16 07:07:13 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/05/16 07:07:13 GET	/ws	Web Socket	82.288µs
+2019/05/16 07:07:14 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/05/16 07:07:14 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/05/16 07:08:57 GET	/ws	Web Socket	128.232µs
+2019/05/16 07:08:57 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/05/16 07:08:57 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/05/16 07:08:58 GET	/ws	Web Socket	110.851µs
+2019/05/16 07:08:58 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/05/16 07:08:58 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/05/16 07:17:33 GET	/ws	Web Socket	97.471µs
+2019/05/16 07:17:34 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/05/16 07:17:34 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/05/16 07:17:35 GET	/ws	Web Socket	80.031µs
+2019/05/16 07:17:35 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/05/16 07:17:35 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/05/16 07:18:29 GET	/ws	Web Socket	142.742µs
+2019/05/16 07:18:29 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/05/16 07:18:29 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/05/16 07:18:30 GET	/ws	Web Socket	71.693µs
+2019/05/16 07:18:30 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/05/16 07:18:30 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/05/16 07:19:31 GET	/ws	Web Socket	136.634µs
+2019/05/16 07:19:31 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/05/16 07:19:31 GET	/ws	Web Socket	191.04µs
+2019/05/16 07:19:31 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/05/16 07:19:31 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/05/16 07:19:31 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/05/16 07:22:55 GET	/ws	Web Socket	124.091µs
+2019/05/16 07:22:55 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/05/16 07:22:55 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/05/16 07:22:56 GET	/ws	Web Socket	287.674µs
+2019/05/16 07:22:56 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/05/16 07:22:56 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/05/16 07:24:51 GET	/ws	Web Socket	143.109µs
+2019/05/16 07:24:52 GET	/ws	Web Socket	87.524µs
+2019/05/16 07:24:52 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/05/16 07:24:52 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/05/16 07:24:52 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/05/16 07:24:52 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/05/16 07:26:57 GET	/ws	Web Socket	130.582µs
+2019/05/16 07:26:58 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/05/16 07:26:58 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/05/16 07:26:58 GET	/ws	Web Socket	101.051µs
+2019/05/16 07:26:58 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/05/16 07:26:59 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/05/16 07:27:40 GET	/ws	Web Socket	189.853µs
+2019/05/16 07:27:40 GET	/ws	Web Socket	132.256µs
+2019/05/16 07:27:40 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/05/16 07:27:40 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/05/16 07:27:40 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/05/16 07:27:40 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/05/16 07:30:13 GET	/ws	Web Socket	108.644µs
+2019/05/16 07:30:14 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/05/16 07:30:14 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/05/16 07:30:14 GET	/ws	Web Socket	157.995µs
+2019/05/16 07:30:14 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/05/16 07:30:14 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/05/16 07:30:53 GET	/ws	Web Socket	106.357µs
+2019/05/16 07:30:53 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/05/16 07:30:53 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/05/16 07:30:54 GET	/ws	Web Socket	93.266µs
+2019/05/16 07:30:54 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/05/16 07:30:54 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/05/16 07:31:25 GET	/ws	Web Socket	102.632µs
+2019/05/16 07:31:25 GET	/ws	Web Socket	108.12µs
+2019/05/16 07:31:26 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/05/16 07:31:26 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/05/16 07:31:26 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/05/16 07:31:26 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/05/16 07:32:36 GET	/ws	Web Socket	103.636µs
+2019/05/16 07:32:36 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/05/16 07:32:36 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/05/16 07:32:37 GET	/ws	Web Socket	137.309µs
+2019/05/16 07:32:37 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/05/16 07:32:37 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29

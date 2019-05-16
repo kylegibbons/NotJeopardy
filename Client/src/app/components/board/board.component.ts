@@ -4,6 +4,8 @@ import { Observable, Subject } from 'rxjs';
 
 import { GameService } from '../../services/game.service';
 import { Game } from  '../../models/game';
+import { forEach } from '@angular/router/src/utils/collection';
+import { ReturnStatement } from '@angular/compiler';
 
 
 @Component({
@@ -15,7 +17,8 @@ export class BoardComponent implements OnInit {
   @Input() mode: string;
   
   game:Game;
-  round: number = 1;
+  categories: string[] = [];
+  board: string[][] = [[],[],[],[],[],[]];
   
   //mode: string = "scorekeeper";
 
@@ -29,14 +32,23 @@ export class BoardComponent implements OnInit {
     console.log("BOARD MODE:" + this.mode);
 
     this.gameService.game$.subscribe(game => {
-      console.log(game);
       this.game = game;
-    });
 
-    this.gameService.activeClue$.subscribe(clueSelect => {
-      console.log('ActiveClue: ');
-      console.log(clueSelect);
-      //this.game = game;
+      game.rounds[game.round].categories.forEach((category,index1) => {
+        this.categories[index1] = category.name;
+        
+        category.clues.forEach((clue, index2) => {
+          if (clue.answered) {
+            this.board[index1][index2] = ""
+            return;
+          }
+          this.board[index1][index2] = "$" + (200 * (index2 + 1));
+        })
+      })
+
+      console.log("BOARD:")
+      console.log(this.board)
+
     });
   }
 

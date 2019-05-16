@@ -13,18 +13,12 @@ export class GameService {
   private game: Subject<Game>;
   private gameData: Game;
 
-  public activeClue$: Observable<ClueSelect>;
-  private activeClue: Subject<ClueSelect>;
-  
 
   constructor(private socket: WebsocketService) { 
     console.log('Starting Game service');
 
     this.game = new Subject<Game>();
     this.game$ = this.game.asObservable();
-
-    this.activeClue = new Subject<ClueSelect>();
-    this.activeClue$ = this.activeClue.asObservable();
 
     this.socket.connect();
 
@@ -50,7 +44,9 @@ export class GameService {
             this.game.next(this.gameData);
             break;
           case "SelectClue":
-            this.activeClue.next(thisMessage.payload)
+            this.gameData.activeCategory = this.gameData.rounds[this.gameData.round].categories[thisMessage.payload.categoryNumber];
+            this.gameData.activeClue = this.gameData.rounds[this.gameData.round].categories[thisMessage.payload.categoryNumber].clues[thisMessage.payload.clueNumber];
+            this.game.next(this.gameData);
             break;
         }
         
