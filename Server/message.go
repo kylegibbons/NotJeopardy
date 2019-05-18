@@ -30,6 +30,8 @@ func UnmarshallMessage(client *Client, rawMessage []byte) Message {
 		return Message{}
 	}
 
+	log.Printf("Received message: %v", messageMetatdata.MessageType)
+
 	switch messageMetatdata.MessageType {
 	case "GameState":
 
@@ -50,6 +52,83 @@ func UnmarshallMessage(client *Client, rawMessage []byte) Message {
 	case "SelectClue":
 		var payload struct {
 			Payload ClueSelect `json:"payload,omitempty"`
+		}
+
+		err := json.Unmarshal(rawMessage, &payload)
+
+		if err != nil {
+			log.Printf("Could not unmarshall message payload: %v\n", err)
+			return Message{}
+		}
+
+		//fmt.Printf("%+v\n", payload)
+
+		newMessage := Message{
+			GameID:      messageMetatdata.GameID,
+			Client:      client,
+			MessageType: messageMetatdata.MessageType,
+			Timestamp:   messageMetatdata.Timestamp,
+			Payload:     payload.Payload,
+		}
+
+		log.Printf("Unmarshalled message: %+v\n", newMessage)
+
+		return newMessage
+	case "ClueDetermination":
+		var payload struct {
+			Payload ClueDetermination `json:"payload,omitempty"`
+		}
+
+		err := json.Unmarshal(rawMessage, &payload)
+
+		if err != nil {
+			log.Printf("Could not unmarshall message payload: %v\n", err)
+			return Message{}
+		}
+
+		//fmt.Printf("%+v\n", payload)
+
+		newMessage := Message{
+			GameID:      messageMetatdata.GameID,
+			Client:      client,
+			MessageType: messageMetatdata.MessageType,
+			Timestamp:   messageMetatdata.Timestamp,
+			Payload:     payload.Payload,
+		}
+
+		log.Printf("Unmarshalled message: %+v\n", newMessage)
+
+		return newMessage
+
+	case "EnableBuzzers":
+
+		newMessage := Message{
+			GameID:      messageMetatdata.GameID,
+			Client:      client,
+			MessageType: messageMetatdata.MessageType,
+			Timestamp:   messageMetatdata.Timestamp,
+		}
+
+		log.Printf("Unmarshalled message: %+v\n", newMessage)
+
+		return newMessage
+
+	case "ResetBuzzers":
+
+		newMessage := Message{
+			GameID:      messageMetatdata.GameID,
+			Client:      client,
+			MessageType: messageMetatdata.MessageType,
+			Timestamp:   messageMetatdata.Timestamp,
+		}
+
+		log.Printf("Unmarshalled message: %+v\n", newMessage)
+
+		return newMessage
+
+	case "SelectContestant":
+		var payload struct {
+			Payload ContestantSelect `json:"payload,omitempty"`
 		}
 
 		err := json.Unmarshal(rawMessage, &payload)

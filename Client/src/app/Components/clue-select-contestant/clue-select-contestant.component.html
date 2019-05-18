@@ -1,0 +1,2 @@
+<button *ngFor="let contestant of contestants; let i = index" mat-raised-button [disabled]="contestant.disabled" (click)="contestantClicked(i)">{{ contestant.name }}</button>
+

@@ -4,6 +4,10 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material';
+
+
 import { InterfaceJudgeComponent } from './Components/interface-judge/interface-judge.component';
 import { InterfaceHostComponent } from './Components/interface-host/interface-host.component';
 import { InterfaceContestantComponent } from './Components/interface-contestant/interface-contestant.component';
@@ -13,6 +17,9 @@ import { GameService } from './services/game.service';
 import { WebsocketService } from './services/websocket.service';
 import { InterfaceDisplayComponent } from './Components/interface-display/interface-display.component';
 import { ClueComponent } from './Components/clue/clue.component';
+import { ClueDeterminationComponent } from './Components/clue-determination/clue-determination.component';
+import { ClueEnableBuzzerComponent } from './Components/clue-enable-buzzer/clue-enable-buzzer.component';
+import { ClueSelectContestantComponent } from './Components/clue-select-contestant/clue-select-contestant.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +29,16 @@ import { ClueComponent } from './Components/clue/clue.component';
     InterfaceContestantComponent,
     BoardComponent,
     InterfaceDisplayComponent,
-    ClueComponent
+    ClueComponent,
+    ClueDeterminationComponent,
+    ClueEnableBuzzerComponent,
+    ClueSelectContestantComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatButtonModule
   ],
   providers: [
     GameService,

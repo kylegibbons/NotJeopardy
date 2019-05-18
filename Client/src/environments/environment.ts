@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  base_url: "localhost:7071"
+  base_url: "localhost:7071",
+  ws_port: "7071"
 };
 
 /*

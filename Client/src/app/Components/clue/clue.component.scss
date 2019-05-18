@@ -30,4 +30,12 @@
         font-size: 50pt;
         flex-grow: 8;
     }
+
+    .response {
+        font-size: 50pt;
+        flex-grow: 8;
+        border-top-width: 2px;
+        border-top-style: solid;
+        border-top-color: black;
+    }
 }

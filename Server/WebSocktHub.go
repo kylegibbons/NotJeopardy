@@ -1,8 +1,6 @@
 package main
 
 import (
-	"log"
-
 	"github.com/satori/go.uuid"
 )
 
@@ -54,7 +52,7 @@ func (h *Hub) run() {
 				close(client.send)
 			}
 		case message := <-h.broadcast:
-			log.Printf("Broadcasting Message: %+v", message)
+			//log.Printf("Broadcasting Message: %+v", message)
 			for client := range h.clients {
 				//fmt.Printf("Client Game ID: %v\n", client.gameID)
 				//fmt.Printf("Message Game ID: %v\n", message.GameID)

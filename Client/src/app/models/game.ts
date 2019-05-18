@@ -6,10 +6,20 @@ export interface Game {
     creatorId?: string;
     creatorName?: string;
     gameName?: string;
+    contestants: Contestant[];
     rounds: Round[];
     round: number;
+    enableBuzzers: boolean;
+    activeContestant: number;
     activeCategory: Category;
     activeClue: Clue;
+}
+
+export interface Contestant {
+    name: string;
+    media: string;
+    score: number;
+    disabled?: boolean;
 }
 
 export interface Round {
@@ -38,4 +48,11 @@ export interface ClueSelect {
     round: number;
     categoryNumber: number;
     clueNumber: number;
+}
+
+export interface ClueDetermination {
+	CategoryNumber?:   number;
+	ClueNumber?  :  number;
+	Correct: boolean; 
+	DailyDoubleAmount: number;
 }

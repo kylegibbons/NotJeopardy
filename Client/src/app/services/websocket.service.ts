@@ -19,7 +19,8 @@ export class WebsocketService {
   private input$ = new QueueingSubject<string>()
 
   // create the websocket observable, does *not* open the websocket connection
-  private socket$ = makeWebSocketObservable<string>('ws://' + environment.base_url + '/ws')
+  //private socket$ = makeWebSocketObservable<string>('ws://' + environment.base_url + '/ws')
+  private socket$ = makeWebSocketObservable<string>('ws://' + window.location.hostname + ":" + environment.ws_port + '/ws')
 
   // the observable produces a value once the websocket has been opened
   public messages$: Observable<string>;

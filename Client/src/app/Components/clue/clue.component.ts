@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ClueComponent implements OnInit {
   @Input() category: string;
   @Input() clue: string;
+  @Input() response: string;
 
   constructor() { 
     if (!this.category) {

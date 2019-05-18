@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"os"
 	"os/signal"
+	"sync"
 	"syscall"
 	"time"
 
@@ -22,13 +23,14 @@ const (
 )
 
 var (
-	localSettings settings
-	debugChan     = make(chan string, 100)
-	webHandler    WebHandler
-	mw            io.Writer
-	logFile       io.WriteCloser
-	hub           *Hub
-	gameManager   GameManager
+	localSettings   settings
+	debugChan       = make(chan string, 100)
+	webHandler      WebHandler
+	mw              io.Writer
+	logFile         io.WriteCloser
+	hub             *Hub
+	gameManager     GameManager
+	databaseManager DatabaseManager
 )
 
 func main() {
@@ -87,6 +89,13 @@ func run() {
 
 	hub = newHub()
 	go hub.run()
+
+	var wg sync.WaitGroup
+	wg.Add(1)
+
+	go databaseManager.Run(appCtx, &wg)
+
+	wg.Wait()
 
 	go gameManager.Run(appCtx)
 

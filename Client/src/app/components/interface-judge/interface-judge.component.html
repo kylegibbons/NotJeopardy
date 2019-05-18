@@ -1,3 +1,19 @@
 <h2>Judge Interface</h2>
 
-<app-board mode="judge"></app-board>
+<div *ngIf="game" style="height: 100%">
+    <app-board *ngIf="game?.activeCategory === -1" mode="judge" [game]="game" (clueClicked)="clueClicked($event)"></app-board>
+    
+    <div *ngIf="game?.activeCategory != -1">
+        <app-clue  category="{{ game.rounds[game.round].categories[game.activeCategory].name }}" clue="{{ game.rounds[game.round].categories[game.activeCategory].clues[game.activeClue].answer }}" response="{{ game.rounds[game.round].categories[game.activeCategory].clues[game.activeClue].question }}"></app-clue>
+        
+        <app-clue-enable-buzzer *ngIf="!game?.enableBuzzers && game?.activeContestant === -1" (enable)="enableBuzzers()" (reset)="resetBuzzers()"></app-clue-enable-buzzer>
+        
+        <app-clue-select-contestant *ngIf="game?.enableBuzzers && game?.activeContestant === -1" [contestants]="game.contestants" (select)="selectContestant($event)"></app-clue-select-contestant>
+        
+        <app-clue-determination *ngIf="!game?.enableBuzzers && game?.activeContestant != -1" (correct)="determinedCorrect($event)" (wrong)="determinedWrong()" dailyDouble="{{ game.rounds[game.round].categories[game.activeCategory].clues[game.activeClue].dailyDouble }}"></app-clue-determination>   
+    </div>
+
+</div>
+
+
+        

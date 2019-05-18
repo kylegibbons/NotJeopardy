@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Game, ClueSelect } from '../models/game';
+import { Game, ClueSelect, ClueDetermination } from '../models/game';
 import { WebsocketService } from './websocket.service';
-import { Observable, Subject, Subscription } from 'rxjs';
+import { Observable, Subject, Subscription, ReplaySubject } from 'rxjs';
 import { map, filter, retryWhen, delay } from 'rxjs/operators';
 import { normalClosureMessage } from 'rxjs-websockets';
 import { Message } from '../models/message.model';
@@ -9,16 +9,16 @@ import { Message } from '../models/message.model';
 @Injectable()
 export class GameService {
 
-  public game$: Observable<Game>;
-  private game: Subject<Game>;
+  public game$: ReplaySubject<Game> = new ReplaySubject(1);;
+  //private game: Subject<Game>;
   private gameData: Game;
 
 
   constructor(private socket: WebsocketService) { 
     console.log('Starting Game service');
 
-    this.game = new Subject<Game>();
-    this.game$ = this.game.asObservable();
+    //this.game = new Subject<Game>();
+    //this.game$ = 
 
     this.socket.connect();
 
@@ -32,22 +32,22 @@ export class GameService {
 
     const messagesSubscription: Subscription = this.socket.messages$.subscribe(
       (message: string) => {
-        console.log('received message:', message)
+        console.log('received message')
         const thisMessage: Message = JSON.parse(message);
 
         switch (thisMessage.messageType) {
           case "GameState":
             console.log("Message: GameState")
 
-            this.gameData = JSON.parse(thisMessage.payload)
+            this.gameData = thisMessage.payload;
 
-            this.game.next(this.gameData);
+            this.game$.next(this.gameData);
             break;
-          case "SelectClue":
+          /* case "SelectClue":
             this.gameData.activeCategory = this.gameData.rounds[this.gameData.round].categories[thisMessage.payload.categoryNumber];
             this.gameData.activeClue = this.gameData.rounds[this.gameData.round].categories[thisMessage.payload.categoryNumber].clues[thisMessage.payload.clueNumber];
             this.game.next(this.gameData);
-            break;
+            break; */
         }
         
       },
@@ -68,7 +68,7 @@ export class GameService {
     )
   }
 
-  public SelectClue(categoryNumber:string, clueNumber: string) {
+  public SelectClue(categoryNumber: number, clueNumber: number) {
     this.socket.send(
       {
         messageType: "SelectClue",
@@ -78,6 +78,55 @@ export class GameService {
           round: this.gameData.round,
           categoryNumber: categoryNumber,
           clueNumber: clueNumber,
+        }
+      }
+    )
+  }
+
+  public EnableBuzzers() {
+    this.socket.send(
+      {
+        messageType: "EnableBuzzers",
+        gameId: this.gameData.id,
+        timestamp: null,
+        payload:  null,
+      }
+    )
+  }
+
+  public ResetBuzzers() {
+    this.socket.send(
+      {
+        messageType: "ResetBuzzers",
+        gameId: this.gameData.id,
+        timestamp: null,
+        payload:  null,
+      }
+    )
+  }
+
+  public SelectContestant(contestant: number) {
+    this.socket.send(
+      {
+        messageType: "SelectContestant",
+        gameId: this.gameData.id,
+        timestamp: null,
+        payload:  {
+          contestant: contestant,
+        },
+      }
+    )
+  }
+
+  public DetermineClue(correct: boolean, dailyDoubleAmount: number) {
+    this.socket.send(
+      {
+        messageType: "ClueDetermination",
+        gameId: this.gameData.id,
+        timestamp: null,
+        payload:  {
+          correct: correct,
+          dailyDoubleAmount: dailyDoubleAmount,
         }
       }
     )

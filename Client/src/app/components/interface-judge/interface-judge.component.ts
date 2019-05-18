@@ -11,7 +11,7 @@ export class InterfaceJudgeComponent implements OnInit {
 
   game: Game;
 
-  constructor(private gameService: GameService) { }
+  constructor(public gameService: GameService) { }
 
   ngOnInit() {
 
@@ -19,5 +19,35 @@ export class InterfaceJudgeComponent implements OnInit {
       this.game = game;
     });
 
+  }
+
+  clueClicked(info) {
+    console.log("Clue Clicked:");
+    console.log(info);
+
+    this.gameService.SelectClue(info.categoryNumber, info.clueNumber);
+  }
+
+  enableBuzzers() {
+    this.gameService.EnableBuzzers();
+  }
+
+  resetBuzzers() {
+    this.gameService.ResetBuzzers();
+  }
+
+  selectContestant(contestant: number) {
+    console.log("Selecting contestant " + contestant);
+    this.gameService.SelectContestant(contestant);
+  }
+
+  determinedCorrect() {
+    console.log("determined correct")
+    this.gameService.DetermineClue(true,0);
+  }
+
+  determinedWrong() {
+    console.log("determined wrong")
+    this.gameService.DetermineClue(false,0);
   }
 }

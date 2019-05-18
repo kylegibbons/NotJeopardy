@@ -4,15 +4,30 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: .75fr 1fr 1fr 1fr 1fr 1fr; //10vmin repeat(5, 18vmin);
 
-    div {
-        font-size: 25px;
+    .category {
+        text-align: center;
+        font-size: 2vw;
         font-weight: 500;
-        display: flex;
         border-style: solid;
         border-color: black;
         border-width: 1px;
         background-color: red;
         
+        
+        display: flex;
+        justify-content:center;
+        align-content:center;
+        flex-direction:column;
+    }
+
+    .clue {
+        text-align: center;
+        font-size: 4vw;
+        font-weight: 500;
+        border-style: solid;
+        border-color: black;
+        border-width: 1px;
+        background-color: red;
         
         display: flex;
         justify-content:center;
