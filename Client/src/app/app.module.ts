@@ -20,6 +20,8 @@ import { ClueComponent } from './Components/clue/clue.component';
 import { ClueDeterminationComponent } from './Components/clue-determination/clue-determination.component';
 import { ClueEnableBuzzerComponent } from './Components/clue-enable-buzzer/clue-enable-buzzer.component';
 import { ClueSelectContestantComponent } from './Components/clue-select-contestant/clue-select-contestant.component';
+import { ScoresComponent } from './Components/scores/scores.component';
+import { JudgeActionsComponent } from './Components/judge-actions/judge-actions.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { ClueSelectContestantComponent } from './Components/clue-select-contesta
     ClueComponent,
     ClueDeterminationComponent,
     ClueEnableBuzzerComponent,
-    ClueSelectContestantComponent
+    ClueSelectContestantComponent,
+    ScoresComponent,
+    JudgeActionsComponent
   ],
   imports: [
     BrowserModule,

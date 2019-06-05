@@ -1,5 +1,5 @@
-Display
-<div *ngIf="game" style="height: 100%">
+<div *ngIf="game" class="main">
+    <app-scores [contestants]="game.contestants"></app-scores>
     <app-board *ngIf="game?.activeCategory < 0" [game]="game"></app-board>
     <app-clue *ngIf="game?.activeCategory > -1" category="{{ game.rounds[game.round].categories[game.activeCategory].name }}" clue="{{ game.rounds[game.round].categories[game.activeCategory].clues[game.activeClue].answer }}"></app-clue>
 </div>

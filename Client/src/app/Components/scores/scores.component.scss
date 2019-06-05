@@ -1,0 +1,24 @@
+.container {
+    width: 100%;
+    display: flex;
+    
+    flex-direction: row;
+    justify-content:center;
+    align-content:center;
+
+    .contestant {
+        display: flex;
+        text-align: center;
+        font-size: 25px;
+    
+        flex-grow: 1;
+        flex-direction: column;
+        justify-content:center;
+        align-content:center;
+
+        background-color: red;
+        border-color: black;
+        border-width: 1px;
+        border-style: solid;
+    }
+}
