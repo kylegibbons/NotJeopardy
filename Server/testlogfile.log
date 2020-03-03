@@ -2689,3 +2689,103 @@
 2019/05/19 15:35:55 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
 2019/05/19 15:35:55 Received message: JoinGame
 2019/05/19 15:35:55 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/07/26 09:41:50 Unable to connect to DB bucket: failed to connect to any of the specified hosts
+2019/07/26 09:42:05 Unable to connect to DB bucket: failed to connect to any of the specified hosts
+2019/07/26 09:42:15 Unable to connect to DB bucket: failed to connect to any of the specified hosts
+2019/07/26 09:46:39 GET	/ws	Web Socket	1.720531ms
+2019/07/26 09:46:39 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/07/26 09:46:39 Received message: JoinGame
+2019/07/26 09:46:39 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/07/26 09:46:49 GET	/ws	Web Socket	299.471µs
+2019/07/26 09:46:49 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/07/26 09:46:49 Received message: JoinGame
+2019/07/26 09:46:49 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/07/26 09:51:47 GET	/ws	Web Socket	151.923µs
+2019/07/26 09:51:48 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/07/26 09:51:48 Received message: JoinGame
+2019/07/26 09:51:48 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/07/26 09:51:50 {"messageType":"SelectClue","gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","timestamp":null,"payload":{"round":0,"categoryNumber":1,"clueNumber":2}}
+2019/07/26 09:51:50 Received message: SelectClue
+2019/07/26 09:51:50 Unmarshalled message: {Client:0xc4200acfc0 MessageType:SelectClue GameID:a267dd0b-40cb-4178-ad8c-58d5efa1ff29 Timestamp:0001-01-01 00:00:00 +0000 UTC Payload:{CategoryNumber:1 ClueNumber:2}}
+2019/07/26 09:51:58 {"messageType":"EnableBuzzers","gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","timestamp":null,"payload":null}
+2019/07/26 09:51:58 Received message: EnableBuzzers
+2019/07/26 09:51:58 Unmarshalled message: {Client:0xc4200acfc0 MessageType:EnableBuzzers GameID:a267dd0b-40cb-4178-ad8c-58d5efa1ff29 Timestamp:0001-01-01 00:00:00 +0000 UTC Payload:<nil>}
+2019/07/26 09:52:02 {"messageType":"SelectContestant","gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","timestamp":null,"payload":{"contestant":0}}
+2019/07/26 09:52:02 Received message: SelectContestant
+2019/07/26 09:52:02 Unmarshalled message: {Client:0xc4200acfc0 MessageType:SelectContestant GameID:a267dd0b-40cb-4178-ad8c-58d5efa1ff29 Timestamp:0001-01-01 00:00:00 +0000 UTC Payload:{Contestant:0}}
+2019/07/26 09:52:06 {"messageType":"ClueDetermination","gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","timestamp":null,"payload":{"correct":false,"dailyDoubleAmount":0}}
+2019/07/26 09:52:06 Received message: ClueDetermination
+2019/07/26 09:52:06 Unmarshalled message: {Client:0xc4200acfc0 MessageType:ClueDetermination GameID:a267dd0b-40cb-4178-ad8c-58d5efa1ff29 Timestamp:0001-01-01 00:00:00 +0000 UTC Payload:{CategoryNumber:0 ClueNumber:0 Correct:false DailyDoubleAmount:0}}
+2019/07/26 09:52:06 Deductin 600 from contestant 0 score
+2019/07/26 09:52:08 {"messageType":"SelectContestant","gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","timestamp":null,"payload":{"contestant":1}}
+2019/07/26 09:52:08 Received message: SelectContestant
+2019/07/26 09:52:08 Unmarshalled message: {Client:0xc4200acfc0 MessageType:SelectContestant GameID:a267dd0b-40cb-4178-ad8c-58d5efa1ff29 Timestamp:0001-01-01 00:00:00 +0000 UTC Payload:{Contestant:1}}
+2019/07/26 09:52:09 {"messageType":"ClueDetermination","gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","timestamp":null,"payload":{"correct":true,"dailyDoubleAmount":0}}
+2019/07/26 09:52:09 Received message: ClueDetermination
+2019/07/26 09:52:09 Unmarshalled message: {Client:0xc4200acfc0 MessageType:ClueDetermination GameID:a267dd0b-40cb-4178-ad8c-58d5efa1ff29 Timestamp:0001-01-01 00:00:00 +0000 UTC Payload:{CategoryNumber:0 ClueNumber:0 Correct:true DailyDoubleAmount:0}}
+2019/07/26 09:52:09 Addint 600 to contestant 1 score
+2019/07/26 09:52:15 {"messageType":"SelectClue","gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","timestamp":null,"payload":{"round":0,"categoryNumber":4,"clueNumber":1}}
+2019/07/26 09:52:15 Received message: SelectClue
+2019/07/26 09:52:15 Unmarshalled message: {Client:0xc4200acfc0 MessageType:SelectClue GameID:a267dd0b-40cb-4178-ad8c-58d5efa1ff29 Timestamp:0001-01-01 00:00:00 +0000 UTC Payload:{CategoryNumber:4 ClueNumber:1}}
+2019/07/26 09:52:23 {"messageType":"ResetBuzzers","gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","timestamp":null,"payload":null}
+2019/07/26 09:52:23 Received message: ResetBuzzers
+2019/07/26 09:52:23 Unmarshalled message: {Client:0xc4200acfc0 MessageType:ResetBuzzers GameID:a267dd0b-40cb-4178-ad8c-58d5efa1ff29 Timestamp:0001-01-01 00:00:00 +0000 UTC Payload:<nil>}
+2019/07/26 09:52:24 {"messageType":"EnableBuzzers","gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","timestamp":null,"payload":null}
+2019/07/26 09:52:24 Received message: EnableBuzzers
+2019/07/26 09:52:24 Unmarshalled message: {Client:0xc4200acfc0 MessageType:EnableBuzzers GameID:a267dd0b-40cb-4178-ad8c-58d5efa1ff29 Timestamp:0001-01-01 00:00:00 +0000 UTC Payload:<nil>}
+2019/07/26 09:52:25 {"messageType":"SelectContestant","gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","timestamp":null,"payload":{"contestant":0}}
+2019/07/26 09:52:25 Received message: SelectContestant
+2019/07/26 09:52:25 Unmarshalled message: {Client:0xc4200acfc0 MessageType:SelectContestant GameID:a267dd0b-40cb-4178-ad8c-58d5efa1ff29 Timestamp:0001-01-01 00:00:00 +0000 UTC Payload:{Contestant:0}}
+2019/07/26 09:52:29 {"messageType":"SelectContestant","gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","timestamp":null,"payload":{"contestant":0}}
+2019/07/26 09:52:29 Received message: SelectContestant
+2019/07/26 09:52:29 Unmarshalled message: {Client:0xc4200acfc0 MessageType:SelectContestant GameID:a267dd0b-40cb-4178-ad8c-58d5efa1ff29 Timestamp:0001-01-01 00:00:00 +0000 UTC Payload:{Contestant:0}}
+2019/07/26 09:52:29 {"messageType":"SelectContestant","gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","timestamp":null,"payload":{"contestant":0}}
+2019/07/26 09:52:29 Received message: SelectContestant
+2019/07/26 09:52:29 Unmarshalled message: {Client:0xc4200acfc0 MessageType:SelectContestant GameID:a267dd0b-40cb-4178-ad8c-58d5efa1ff29 Timestamp:0001-01-01 00:00:00 +0000 UTC Payload:{Contestant:0}}
+2019/07/26 09:52:29 {"messageType":"SelectContestant","gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","timestamp":null,"payload":{"contestant":1}}
+2019/07/26 09:52:29 Received message: SelectContestant
+2019/07/26 09:52:29 Unmarshalled message: {Client:0xc4200acfc0 MessageType:SelectContestant GameID:a267dd0b-40cb-4178-ad8c-58d5efa1ff29 Timestamp:0001-01-01 00:00:00 +0000 UTC Payload:{Contestant:1}}
+2019/07/26 09:52:29 {"messageType":"SelectContestant","gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","timestamp":null,"payload":{"contestant":2}}
+2019/07/26 09:52:29 Received message: SelectContestant
+2019/07/26 09:52:29 Unmarshalled message: {Client:0xc4200acfc0 MessageType:SelectContestant GameID:a267dd0b-40cb-4178-ad8c-58d5efa1ff29 Timestamp:0001-01-01 00:00:00 +0000 UTC Payload:{Contestant:2}}
+2019/07/26 09:52:31 GET	/ws	Web Socket	94.139µs
+2019/07/26 09:52:31 {"messageType":"JoinGame","timestamp":null,"gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","payload":null}
+2019/07/26 09:52:31 Received message: JoinGame
+2019/07/26 09:52:31 Joining Game a267dd0b-40cb-4178-ad8c-58d5efa1ff29
+2019/07/26 09:52:33 {"messageType":"ClueDetermination","gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","timestamp":null,"payload":{"correct":true,"dailyDoubleAmount":0}}
+2019/07/26 09:52:33 Received message: ClueDetermination
+2019/07/26 09:52:33 Unmarshalled message: {Client:0xc4200acc40 MessageType:ClueDetermination GameID:a267dd0b-40cb-4178-ad8c-58d5efa1ff29 Timestamp:0001-01-01 00:00:00 +0000 UTC Payload:{CategoryNumber:0 ClueNumber:0 Correct:true DailyDoubleAmount:0}}
+2019/07/26 09:52:33 Addint 400 to contestant 2 score
+2019/07/26 09:54:06 {"messageType":"SelectClue","gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","timestamp":null,"payload":{"round":0,"categoryNumber":3,"clueNumber":2}}
+2019/07/26 09:54:06 Received message: SelectClue
+2019/07/26 09:54:06 Unmarshalled message: {Client:0xc4200acc40 MessageType:SelectClue GameID:a267dd0b-40cb-4178-ad8c-58d5efa1ff29 Timestamp:0001-01-01 00:00:00 +0000 UTC Payload:{CategoryNumber:3 ClueNumber:2}}
+2019/07/26 09:54:35 {"messageType":"EnableBuzzers","gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","timestamp":null,"payload":null}
+2019/07/26 09:54:35 Received message: EnableBuzzers
+2019/07/26 09:54:35 Unmarshalled message: {Client:0xc4200acc40 MessageType:EnableBuzzers GameID:a267dd0b-40cb-4178-ad8c-58d5efa1ff29 Timestamp:0001-01-01 00:00:00 +0000 UTC Payload:<nil>}
+2019/07/26 09:54:40 {"messageType":"SelectContestant","gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","timestamp":null,"payload":{"contestant":1}}
+2019/07/26 09:54:40 Received message: SelectContestant
+2019/07/26 09:54:40 Unmarshalled message: {Client:0xc4200acc40 MessageType:SelectContestant GameID:a267dd0b-40cb-4178-ad8c-58d5efa1ff29 Timestamp:0001-01-01 00:00:00 +0000 UTC Payload:{Contestant:1}}
+2019/07/26 09:54:43 {"messageType":"ClueDetermination","gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","timestamp":null,"payload":{"correct":true,"dailyDoubleAmount":0}}
+2019/07/26 09:54:43 Received message: ClueDetermination
+2019/07/26 09:54:43 Unmarshalled message: {Client:0xc4200acc40 MessageType:ClueDetermination GameID:a267dd0b-40cb-4178-ad8c-58d5efa1ff29 Timestamp:0001-01-01 00:00:00 +0000 UTC Payload:{CategoryNumber:0 ClueNumber:0 Correct:true DailyDoubleAmount:0}}
+2019/07/26 09:54:43 Addint 600 to contestant 1 score
+2019/07/26 09:54:52 {"messageType":"SelectClue","gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","timestamp":null,"payload":{"round":0,"categoryNumber":4,"clueNumber":2}}
+2019/07/26 09:54:52 Received message: SelectClue
+2019/07/26 09:54:52 Unmarshalled message: {Client:0xc4200acc40 MessageType:SelectClue GameID:a267dd0b-40cb-4178-ad8c-58d5efa1ff29 Timestamp:0001-01-01 00:00:00 +0000 UTC Payload:{CategoryNumber:4 ClueNumber:2}}
+2019/07/26 09:54:53 {"messageType":"EnableBuzzers","gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","timestamp":null,"payload":null}
+2019/07/26 09:54:53 Received message: EnableBuzzers
+2019/07/26 09:54:53 Unmarshalled message: {Client:0xc4200acc40 MessageType:EnableBuzzers GameID:a267dd0b-40cb-4178-ad8c-58d5efa1ff29 Timestamp:0001-01-01 00:00:00 +0000 UTC Payload:<nil>}
+2019/07/26 09:54:54 {"messageType":"SelectContestant","gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","timestamp":null,"payload":{"contestant":1}}
+2019/07/26 09:54:54 Received message: SelectContestant
+2019/07/26 09:54:54 Unmarshalled message: {Client:0xc4200acc40 MessageType:SelectContestant GameID:a267dd0b-40cb-4178-ad8c-58d5efa1ff29 Timestamp:0001-01-01 00:00:00 +0000 UTC Payload:{Contestant:1}}
+2019/07/26 09:54:55 {"messageType":"ClueDetermination","gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","timestamp":null,"payload":{"correct":false,"dailyDoubleAmount":0}}
+2019/07/26 09:54:55 Received message: ClueDetermination
+2019/07/26 09:54:55 Unmarshalled message: {Client:0xc4200acc40 MessageType:ClueDetermination GameID:a267dd0b-40cb-4178-ad8c-58d5efa1ff29 Timestamp:0001-01-01 00:00:00 +0000 UTC Payload:{CategoryNumber:0 ClueNumber:0 Correct:false DailyDoubleAmount:0}}
+2019/07/26 09:54:55 Deductin 600 from contestant 1 score
+2019/07/26 09:54:57 {"messageType":"SelectContestant","gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","timestamp":null,"payload":{"contestant":0}}
+2019/07/26 09:54:57 Received message: SelectContestant
+2019/07/26 09:54:57 Unmarshalled message: {Client:0xc4200acc40 MessageType:SelectContestant GameID:a267dd0b-40cb-4178-ad8c-58d5efa1ff29 Timestamp:0001-01-01 00:00:00 +0000 UTC Payload:{Contestant:0}}
+2019/07/26 09:54:58 {"messageType":"ClueDetermination","gameId":"a267dd0b-40cb-4178-ad8c-58d5efa1ff29","timestamp":null,"payload":{"correct":false,"dailyDoubleAmount":0}}
+2019/07/26 09:54:58 Received message: ClueDetermination
+2019/07/26 09:54:58 Unmarshalled message: {Client:0xc4200acc40 MessageType:ClueDetermination GameID:a267dd0b-40cb-4178-ad8c-58d5efa1ff29 Timestamp:0001-01-01 00:00:00 +0000 UTC Payload:{CategoryNumber:0 ClueNumber:0 Correct:false DailyDoubleAmount:0}}
+2019/07/26 09:54:58 Deductin 600 from contestant 0 score
